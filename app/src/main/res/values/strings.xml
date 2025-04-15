@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="add_task">Add Task</string>
+    <string name="add_new_task">Add new task</string>
+    <string name="task_title">Task Title</string>
+    <string name="task_description">Task Description</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_time">Select Time</string>
+    <string name="select_date_time">Select Date and Time</string>
+    <string name="repeat_interval">Repeat interval</string>
+    <string name="save_task">Save Task</string>
+    <string name="task_title_error">Please enter task title</string>
+    <string name="task_description_error">Please enter task description</string>
+    <string name="task_repeat_interval_error">Please select task repeat interval</string>
+    <string name="date_label">Date:</string>
+    <string name="repeat_interval_label">Repeat Interval:</string>
+</resources>

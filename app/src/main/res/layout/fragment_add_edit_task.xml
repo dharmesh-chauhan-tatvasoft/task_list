@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="task"
+            type="com.example.myapplication.Task" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dimen_16">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/titleEditTextLayout"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:hint="@string/task_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/titleEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={task.title}"
+                android:background="@color/color_f1f1f1"
+                android:padding="@dimen/dimen_10"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/descriptionEditTextLayout"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:hint="@string/task_description"
+            app:layout_constraintTop_toBottomOf="@+id/titleEditTextLayout"
+            android:layout_marginTop="@dimen/dimen_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/descriptionEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={task.description}"
+                android:background="@color/color_f1f1f1"
+                android:padding="@dimen/dimen_10"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/dateSelectButton"
+            android:text="@string/select_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionEditTextLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/timeSelectButton"
+            android:text="@string/select_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/dateSelectButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/repeatIntervalDropdownLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/repeat_interval"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/dimen_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timeSelectButton" />
+
+        <Spinner
+            android:id="@+id/repeatIntervalSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50"
+            android:contentDescription="@string/repeat_interval"
+            android:background="@drawable/input_border"
+            app:layout_constraintTop_toBottomOf="@+id/repeatIntervalDropdownLabel"
+            android:layout_marginTop="@dimen/dimen_10" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/repeatIntervalSpinner"
+            android:text="@string/save_task"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

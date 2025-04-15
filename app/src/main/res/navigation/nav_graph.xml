@@ -1,0 +1,15 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/taskListFragment">
+
+    <fragment
+        android:id="@+id/taskListFragment"
+        android:name="com.example.myapplication.TaskListFragment"
+        tools:layout="@layout/fragment_task_list" />
+    <fragment
+        android:id="@+id/addEditTaskFragment"
+        android:name="com.example.myapplication.AddEditTaskFragment"
+        tools:layout="@layout/fragment_add_edit_task" />
+
+</navigation>
