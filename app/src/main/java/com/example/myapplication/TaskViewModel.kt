@@ -36,6 +36,7 @@ class TaskViewModel(application: Application) : AndroidViewModel(application) {
     fun update(task: Task) {
         viewModelScope.launch {
             taskDao.update(task)
+            scheduleReminder(task)
         }
     }
 
